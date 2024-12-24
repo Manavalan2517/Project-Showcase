@@ -1,5 +1,6 @@
 
 import { Button } from '@/components/ui/button'
+import GrowingSearchVariant1 from '@/components/ui/GrowingSearchVariant1'
 import Link from 'next/link'
 
 import React from 'react'
@@ -27,7 +28,7 @@ export const TabletNavbar = () => {
               </Link>
               <Link href='/'>
                 <Button variant='link'>
-                  <h1 className='text-lg'>About us</h1>
+                  <h1 className='text-lg'>Categories</h1>
                 </Button>
               </Link>
               <Link href='/'>
@@ -50,6 +51,7 @@ export const TabletNavbar = () => {
               </Link>
             </div>
           </div>
+          <GrowingSearchVariant1/>
         </nav>
       </div>
     </div>

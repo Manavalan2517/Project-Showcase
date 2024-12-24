@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { TabletNavbar } from './TabletNavbar'
+import GrowingSearchVariant1 from '@/components/ui/GrowingSearchVariant1'
+import { MobileNavbar } from './MobileNavbar'
 
 export default function Navbar() {
   const [windowWidth, setWindowWidth] = useState(null)
@@ -47,19 +49,15 @@ export default function Navbar() {
                     <h1 className='text-lg'>Projects</h1>
                   </Button>
                 </Link>
+                <GrowingSearchVariant1/>
                 <Link href='/'>
                   <Button variant='link'>
-                    <h1 className='text-lg'>About us</h1>
+                    <h1 className='text-lg'>Categories</h1>
                   </Button>
                 </Link>
                 <Link href='/'>
                   <Button variant='link'>
                     <h1 className='text-lg'>Contact</h1>
-                  </Button>
-                </Link>
-                <Link href='/'>
-                  <Button variant='link'>
-                    <h1 className='text-lg'>FAQ</h1>
                   </Button>
                 </Link>
               </div>
@@ -76,12 +74,11 @@ export default function Navbar() {
         </div>
       ) : windowWidth > 425 ? (
         <div>
-          <TabletNavbar/>
+          <TabletNavbar />
         </div>
       ) : (
-        <div className='p-4 text-center'>
-          <h2 className='text-lg font-semibold'>Mobile Navbar</h2>
-          <p>Adjust your design for mobile here.</p>
+        <div>
+          <MobileNavbar/>
         </div>
       )}
     </div>
