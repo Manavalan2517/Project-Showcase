@@ -25,7 +25,7 @@ export const MobileNavbar = () => {
 
   return (
     <div className='fixed bottom-0 left-0 w-full'>
-      <nav className='rounded-t-[24px] bg-slate-100 p-5 shadow-lg'>
+      <nav className='rounded-t-[24px] p-5 shadow-lg'>
         <div className='flex items-center justify-between space-x-4'>
           {tabs.map(tab => (
             <Link
