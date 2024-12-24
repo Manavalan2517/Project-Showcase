@@ -24,8 +24,8 @@ export const MobileNavbar = () => {
   ]
 
   return (
-    <div className='rounded-3xl bg-white shadow-md'>
-      <nav className='absolute bottom-0 w-full p-5'>
+    <div className='fixed bottom-0 left-0 w-full'>
+      <nav className='rounded-t-[24px] bg-slate-100 p-5 shadow-lg'>
         <div className='flex items-center justify-between space-x-4'>
           {tabs.map(tab => (
             <Link
@@ -40,7 +40,11 @@ export const MobileNavbar = () => {
                 className='h-[25px]'
               />
               <p
-                className={`text-[10px] ${activeTab === tab.name ? 'font-bold text-[#45A045]' : ''}`}
+                className={`mt-1 text-[10px] ${
+                  activeTab === tab.name
+                    ? 'font-bold text-[#45A045]'
+                    : 'text-gray-400'
+                }`}
               >
                 {tab.name}
               </p>
